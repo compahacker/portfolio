@@ -1,0 +1,137 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito:wght@400&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #C3B091; /* Khaki */
+    --secondary-color: #8B4513; /* SaddleBrown */
+    --background-light: #F4E7D3; /* Light Desert Sand */
+    --text-dark: #5C4033; /* Dark Earth */
+    --accent-color: #C1440E; /* Clay Red */
+    --muted-accent: #9E9A8A; /* Dusty Green */
+}
+
+/* Title Section */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #C3B091, #F4E7D3); /* Desert gradient */
+    color: var(--text-dark); /* Adjust text color for contrast */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: none; /* Hide the empty navigation bar */
+}
+
+/* General Section Styling */
+section {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Shift down slightly */
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s; /* Smooth animation */
+    padding: 60px 20px;
+    margin-top: 80px; /* Space below the fixed navigation bar */
+    text-align: center;
+    background-color: var(--color2); /* White */
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 40px auto; /* Center the section */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+section.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+/* Section Dividers */
+section::after {
+    content: "";
+    display: block;
+    width: 80%; /* Adjust width as needed */
+    height: 2px; /* Divider thickness */
+    background: var(--muted-accent); /* Use Dusty Green for a subtle divider */
+    margin: 20px auto; /* Center the divider */
+    border-radius: 2px; /* Slightly rounded edges */
+}
+
+/* About Section */
+section#about h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark); /* Dark Earth */
+}
+
+section#about p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    color: #333; /* Dark Gray */
+    line-height: 1.6;
+}
+
+/* Projects Section */
+section#projects h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-dark); /* Dark Earth */
+}
+
+section#projects p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+section#projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section#projects li {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Links in Projects Section */
+section#projects a {
+    color: #8B4513; /* SaddleBrown */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+section#projects a:hover {
+    color: var(--accent-color); /* Change to Clay Red */
+    text-decoration: underline; /* Add underline on hover */
+}

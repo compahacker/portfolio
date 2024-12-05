@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Title Section -->
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="cubicle">
+        <ul class="links">
+            <!-- Subheading links removed -->
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>
+            Hello, and welcome to my portfolio! 
+            As a dedicated Cybersecurity professional, I am committed to learning and growth. 
+            I excel in developing innovative solutions, tackling challenges with determination, and continuously refining my skills to stay ahead in this dynamic field. 
+            This portfolio reflects my passion for cybersecurity, showcasing my hands-on experience and practical approach to problem-solving. 
+            Thank you for visiting, and I hope you find my work both insightful and inspiring.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h1>Projects</h1>
+        <ul>
+            <li>
+                <strong>Network Architecture Design:</strong> A comprehensive network design implementing secure communication protocols and VLANs.
+                <a href="file/Network_Design.pdf" target="_blank">Click to View</a>
+            </li>
+            <li>
+                <strong>CTI Report on APT29:</strong> An in-depth research project analyzing the tactics, techniques, and procedures of the Russian threat actor APT29.
+                <a href="files/CTI_Report_APT29.pdf" target="_blank">Click to View</a>
+            </li>
+            <li>
+                <strong>Enhancing Cloud Security:</strong> A detailed capstone research paper exploring automated security monitoring and incident response in AWS. It examines tools like AWS GuardDuty, Lambda, and Security Hub to mitigate risks and strengthen cloud security.
+                <a href="files/Enhancing_Cloud_Security.pdf" target="_blank">Click to View</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- JavaScript for Scroll Animation -->
+    <script>
+        // Select all sections
+        const sections = document.querySelectorAll("section");
+
+        // Add a scroll event listener
+        window.addEventListener("scroll", () => {
+            sections.forEach((section) => {
+                // Get the section's position relative to the viewport
+                const rect = section.getBoundingClientRect();
+
+                // Check if the section is in view
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
