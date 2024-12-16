@@ -51,9 +51,8 @@ nav {
 
 /* General Section Styling */
 section {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Shift down slightly */
-    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s; /* Smooth animation */
+    opacity: 1; /* Make sections fully visible by default */
+    transform: translateY(0); /* No vertical shift */
     padding: 60px 20px;
     margin-top: 80px; /* Space below the fixed navigation bar */
     text-align: center;
@@ -62,11 +61,6 @@ section {
     max-width: 800px;
     margin: 40px auto; /* Center the section */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-section.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Reset position */
 }
 
 /* Section Dividers */
